@@ -2,7 +2,10 @@
 
 namespace App\Console\Commands;
 
+use App\Model\Dynasty;
 use App\Model\Poetry;
+use App\Model\Type;
+use App\Module\AuthorModule;
 use Illuminate\Console\Command;
 
 class SyncDB extends Command
@@ -40,10 +43,27 @@ class SyncDB extends Command
      */
     public function handle()
     {
+        dump("sync Author");
+        $this->syncAuthor();
         //同步唐诗宋词
+        dump("sync Json");
         $this->syncJson();
+
     }
 
+    private function syncAuthor(){
+        $path = $this->path."json";
+        $list = [
+            ['dynasty'=>Dynasty::$typeSong,'file'=>$path.DIRECTORY_SEPARATOR.'authors.song.json'],
+            ['dynasty'=>Dynasty::$typeTang,'file'=>$path.DIRECTORY_SEPARATOR.'authors.tang.json'],
+        ];
+        foreach ($list as $item){
+            $list = json_decode(file_get_contents($item['file']),true);
+            foreach ($list as $data){
+                AuthorModule::insertAuthor($data['name'],$data['desc'],$item['dynasty']);
+            }
+        }
+    }
 
     private function syncJson(){
         //取路径下的
@@ -55,9 +75,9 @@ class SyncDB extends Command
 
             if(isset($matchType[1])){
                 if($matchType[1] == 'song'){
-                    $type = 'song';
+                    $type = Type::$typeSong;
                 }elseif($matchType[1] == 'tang'){
-                    $type = 'tang';
+                    $type = Type::$typeTang;
                 }else{
                     continue;
                 }
@@ -81,6 +101,7 @@ class SyncDB extends Command
     }
 
     /**
+     * 获取路径下的json文件
      * @param $path
      * @return array
      */

@@ -16,3 +16,12 @@ use Illuminate\Http\Request;
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
+
+Route::group(['prefix' => 'poetry','namespace' => 'Api'], function () {
+
+    Route::get("/recommend",'PoetryController@recommend');
+    Route::get("/getPoetryDetail",'PoetryController@getPoetryDetail');
+    Route::get("/getAuthorList",'PoetryController@getAuthorList');
+    Route::get("/getTypeList",'PoetryController@getTypeList');
+
+});
