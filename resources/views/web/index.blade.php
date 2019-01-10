@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="诗词兔-古诗词大全作为传承经典的网站成立于2019年。诗词兔-古诗词大全专注于古诗文服务，致力于让古诗文爱好者更便捷地发表及获取古诗文相关资料。">
   <title>诗词兔-古诗词大全</title>
-  <link rel="stylesheet" href="../../../public/shicitu/css/index.css">
-  <link rel="shortcut icon" href="../../../public/shicitu/img/favicon.ico">
+  <link rel="stylesheet" href="/web/css/index.css">
+  <link rel="shortcut icon" href="/web/img/favicon.ico">
 </head>
 <body>
   <div class="index">
