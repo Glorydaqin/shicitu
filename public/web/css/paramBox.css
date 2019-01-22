@@ -1,0 +1,39 @@
+.param-box {
+  display: inline-block;
+  /* width: 20%; */
+  width: 100%;
+  /* margin-top: 20px; */
+  margin-left: 30px;
+  vertical-align: top;
+}
+
+.param-box .param-item-box {
+  width: 100%;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  background-color: #F0EFE2;
+  text-align: left;
+}
+
+.param-box .param-item-box  .title {
+  margin-left: 3%;
+  padding-left: 10px;
+  font-size: 18px;
+  border-left: 3px solid #A2C241;
+  
+}
+
+.param-box .param-item-box .text {
+  display: inline-block;
+  margin: 10px 3%;
+  width: 26%;
+  height: 24px;
+  font-size: 14px;
+  border: 1px solid #DAD9D1;
+  text-align: center;
+  color: #19537D;
+}
+
+.param-box .param-item-box .text:hover {
+  text-decoration: underline;
+}
