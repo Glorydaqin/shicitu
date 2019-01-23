@@ -1,7 +1,7 @@
 <div class="poetry-list">
   <div class="poetry-item">
-    <!-- <a href="/poetry" target="_blank" class="title"><p >霜天晓角·桂花</p></a>  -->
-    <p class="title">小雅·蓼萧</p>
+    <a href="/poetry" target="_blank" class="title"><p >霜天晓角·桂花</p></a> 
+    <!-- <p class="title">小雅·蓼萧</p> -->
     <p class="author">宋代：谢懋</p>
     <p class="content">绿云剪叶，低护黄金屑。占断花中声誉，香与韵、两清洁。</p>
     <p class="content">胜绝，君听说。是他来处别。试看仙衣犹带，金庭露、玉阶月。</p>

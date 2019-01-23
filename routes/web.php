@@ -14,3 +14,4 @@
 Route::get('/', 'Web\IndexController@index');
 Route::get('/search', 'Web\IndexController@search');
 Route::get('/list', 'Web\IndexController@list');
+Route::get('/poetry', 'Web\IndexController@poetry');

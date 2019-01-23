@@ -21,4 +21,8 @@ class IndexController extends Controller
     public function list(){
         return view('web.list');
     }
+
+    public function poetry(){
+        return view('web.poetryDetail');
+    }
 }
