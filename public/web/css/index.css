@@ -4,27 +4,51 @@ html, body {
   padding: 0;
   margin: 0;
 }
-.index {
-  min-height: 100%;
-  width: 100%;
-  padding-bottom: 20px;
-  background-color: #E1E0C7;
+
+@media screen and (min-width: 1201px) {
+  .index {
+    min-height: 100%;
+    width: 100%;
+    padding-bottom: 20px;
+    background-color: #E1E0C7;
+  }
+
+  .index .main-content {
+    text-align: center;
+  }
+
+  .index .main-content .left-box {
+    display: inline-block;
+    width: 40%;
+  }
+
+  .index .main-content .right-box {
+    display: inline-block;
+    width: 20%;
+    vertical-align: top;
+    padding-top: 20px;
+  }
 }
 
-.index .main-content {
-  text-align: center;
+/* web app版本样式 */
+@media screen and (max-width: 1200px) {
+  .index {
+    min-height: 100%;
+    width: 100%;
+    padding-bottom: 20px;
+    background-color: #E1E0C7;
+  }
+  
+  .index .main-content {
+    text-align: center;
+  }
+  
+  .index .main-content .left-box {
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .index .main-content .right-box {
+    display: none;
+  }
 }
-
-.index .main-content .left-box {
-  display: inline-block;
-  width: 40%;
-}
-
-.index .main-content .right-box {
-  display: inline-block;
-  width: 20%;
-  vertical-align: top;
-  padding-top: 20px;
-}
-
-

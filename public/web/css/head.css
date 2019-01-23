@@ -1,79 +1,161 @@
 /* head部分 */
-.head {
-  width: 100%;
-  height: 50px;
-  background-color: #5D6146;
-  text-align: center;
-  line-height: 50px;
+
+@media screen and (min-width: 1201px) {
+  .head {
+    width: 100%;
+    height: 50px;
+    background-color: #5D6146;
+    text-align: center;
+    line-height: 50px;
+  }
+
+  .head .title-box {
+    display: inline-block;
+  }
+
+  .head .title-box .icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url(/web/img/rabbit.png) no-repeat;
+    background-size: cover;
+  }
+
+  .head .title-box .title {
+    display: inline-block;
+    margin: 0 20px 0 0;
+    height: 100%;
+    font-size: 26px;
+    color: #F0EFE2;
+    vertical-align: top;
+  }
+
+  .head .nav-box {
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+  }
+  .head .nav-box .nav-item {
+    display: inline-block;
+    height: 100%;
+    width: 50px;
+    margin: 0 10px;
+    color: #F0EFE2;
+    text-decoration: none;
+  }
+  .head .nav-box .nav-item-active {
+    background-color:#757863;
+    border-bottom:3px solid #F0EFE2;
+  }
+
+  .head .nav-box .nav-item:hover {
+    background-color:#757863;
+  }
+
+  .search-box {
+    position: relative;
+    display: inline-block;
+    margin-left: 10%;
+    width: 20%;
+    height: 30px;
+    vertical-align: top;
+  }
+
+  .search-box .search-ipt {
+    padding-left: 10px;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: 0;
+  }
+
+  .search-box .icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url(/web/img/search.png) no-repeat;
+    background-size: cover;
+    right: 10px;
+    top: 15px;
+  }
 }
-
-
-.head .icon {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  background: url(/web/img/rabbit.png) no-repeat;
-  background-size: cover;
-}
-
-.head .title {
-  display: inline-block;
-  margin: 0 20px 0 0;
-  height: 100%;
-  font-size: 26px;
-  color: #F0EFE2;
-  vertical-align: top;
-}
-
-.head .nav-box {
-  display: inline-block;
-  height: 100%;
-  vertical-align: top;
-}
-.head .nav-box .nav-item {
-  display: inline-block;
-  height: 100%;
-  width: 50px;
-  margin: 0 10px;
-  color: #F0EFE2;
-  text-decoration: none;
-}
-.head .nav-box .nav-item-active {
-  background-color:#757863;
-  border-bottom:3px solid #F0EFE2;
-}
-
-.head .nav-box .nav-item:hover {
-  background-color:#757863;
-}
-
-.search-box {
-  position: relative;
-  display: inline-block;
-  margin-left: 10%;
-  width: 20%;
-  height: 30px;
-  vertical-align: top;
-}
-
-.search-box .search-ipt {
-  padding-left: 10px;
-  height: 100%;
-  width: 100%;
-  border-radius: 5px;
-  border: 0;
-}
-
-.search-box .icon {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: url(/web/img/search.png) no-repeat;
-  background-size: cover;
-  right: 10px;
-  top: 15px;
-}
-
-
-
 /* head部分结束 */
+
+
+/* web app版本样式 */
+@media screen and (max-width: 1200px) {
+  .head {
+    width: 100%;
+    background-color: #5D6146;
+    text-align: center;
+  }
+
+  .head .title-box {
+    display: block;
+  }
+
+  .head .title-box .icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url(/web/img/rabbit.png) no-repeat;
+    background-size: cover;
+  }
+
+  .head .title-box .title {
+    display: inline-block;
+    margin: 0 20px 0 0;
+    height: 100%;
+    font-size: 26px;
+    color: #F0EFE2;
+    vertical-align: top;
+  }
+
+  .head .nav-box {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    background-color: #cac9b1;
+  }
+  .head .nav-box .nav-item {
+    display: inline-block;
+    height: 100%;
+    width: 50px;
+    /* margin: 0 10px; */
+    color: #F0EFE2;
+    text-decoration: none;
+  }
+  .head .nav-box .nav-item-active {
+    background-color:#757863;
+    border-bottom:3px solid #F0EFE2;
+  }
+
+  .head .nav-box .nav-item:hover {
+    background-color:#757863;
+  }
+
+  .search-box {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .search-box .search-ipt {
+    padding-left: 10px;
+    height: 100%;
+    width: 100%;
+    border: 0;
+  }
+
+  .search-box .icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url(/web/img/search.png) no-repeat;
+    background-size: cover;
+    right: 10px;
+    top: 5px;
+  }
+}
