@@ -48,11 +48,8 @@
       <div class="right-content">
         @include("web.paramBox")
       </div>
-      
     </div>
-    
-
-   
+    @include("web.footer")
   </div>
 </body>
 </html>

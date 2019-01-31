@@ -26,6 +26,7 @@
           <p class="content">蓼彼萧斯，零露浓浓。既见君子，鞗革忡忡。和鸾雍雍，万福攸同。</p>
         </div>
     </div>
+    @include("web.footer")
   </div>
 </body>
 </html>

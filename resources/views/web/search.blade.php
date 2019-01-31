@@ -32,9 +32,7 @@
       </div>
       
     </div>
-    
-
-   
+    @include("web.footer")
   </div>
 </body>
 </html>
