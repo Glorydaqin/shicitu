@@ -43,7 +43,7 @@
           </div>
           <a href="javascript:;" class="search-btn" onclick="searchList()">查询</a>
         </div>
-        @include("web.poetryList")
+        {{--@include("web.poetryList")--}}
       </div>
       <div class="right-content">
         @include("web.paramBox")

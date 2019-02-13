@@ -1,32 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="诗词兔-古诗词大全作为传承经典的网站成立于2019年。诗词兔-古诗词大全专注于古诗文服务，致力于让古诗文爱好者更便捷地发表及获取古诗文相关资料。">
-  <title>诗词兔-古诗词大全</title>
-  <link rel="stylesheet" href="/web/css/reset.css">
-  <link rel="stylesheet" href="/web/css/head.css">
-  <link rel="stylesheet" href="/web/css/index.css">
-  <link rel="stylesheet" href="/web/css/poetryList.css">
-  <link rel="stylesheet" href="/web/css/paramBox.css">
-  <link rel="stylesheet" href="/web/css/page.css">
-  <link rel="shortcut icon" href="/web/img/favicon.ico">
-</head>
-<body>
-  <div class="index">
-    @include("web.header")
+@extends("web.layout")
 
-    <div class="main-content">
-      <div class="left-box">
-      @include("web.poetryList")
-      </div>
-      <div class="right-box">
-      @include("web.paramBox")
-      </div>
+@section("container")
+
+    <div class="left-box">
+
+        <div class="poetry-list">
+            @foreach($list as $item)
+                <div class="poetry-item">
+                    <a href="/info/{{ $item['id'] }}" target="_blank" class="title"><p>{{ $item['title'] }}</p></a>
+                    <!-- <p class="title">小雅·蓼萧</p> -->
+                    <p class="author">唐诗：{{ $item['author'] }}</p>
+                    @php($content = json_decode($item['paragraphs'],true))
+                    @foreach($content as $value)
+                        <p class="content">{{ $value }}</p>
+                    @endforeach
+                </div>
+            @endforeach
+            <div class="page-box">
+                {{ $list->links() }}
+            </div>
+            {{--@include("web.page")--}}
+        </div>
     </div>
-    @include("web.footer")
-  </div>
-</body>
-</html>
+    <div class="right-box">
+
+    </div>
+@endsection

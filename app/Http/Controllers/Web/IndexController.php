@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Web;
 
+use App\Model\Poetry;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
@@ -11,7 +12,9 @@ class IndexController extends Controller
 {
     //
     public function index(){
-        return view('web.index');
+        $list = Poetry::paginate();
+
+        return view('web.index',compact('list'));
     }
 
     public function search(){
@@ -22,7 +25,8 @@ class IndexController extends Controller
         return view('web.list');
     }
 
-    public function poetry(){
-        return view('web.poetryDetail');
+    public function info($id){
+        $item = Poetry::where("id",$id)->first();
+        return view('web.info',compact('item'));
     }
 }

@@ -1,6 +1,6 @@
 <header class="head">
   <div class="title-box">
-    <a href="https://www.shicitu.com"><i class="icon"></i><span class="title">诗词兔</span></a>
+    <a href="/"><i class="icon"></i><span class="title">诗词兔</span></a>
   </div>
   <div class="nav-box"><a href="/" class="nav-item nav-item-active">推荐</a><a href="/list" class="nav-item">诗文</a><a href="/list" class="nav-item">作者</a></div>
   <div class="search-box">
