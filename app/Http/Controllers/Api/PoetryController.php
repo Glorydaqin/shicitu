@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Model\Author;
 use App\Model\Poetry;
 use App\Module\AuthorModule;
+use App\Module\DynastyModule;
 use App\Module\PoetryModule;
 use App\Module\TypeModule;
 use Illuminate\Http\Request;
@@ -41,12 +42,24 @@ class PoetryController extends Controller
 
     public function getDynastyList()
     {
-
+        $list = DynastyModule::getList();
+        return ['code'=>0,'data'=>$list,'message'=>"success"];
     }
 
     public function getPoetryList()
     {
+        $typeId = Input::get("typeId");
+        $dynastyId = Input::get("dynastyId");
+        $authorId = Input::get("authorId");
+        $pageNo = Input::get("pageNo",1);
+        $pageSize = Input::get("pageSize",20);
 
+        $handle = Poetry::query();
+        if($typeId)
+            $handle->where("type",$typeId);
+        $list = $handle->skip(($pageNo-1)*$pageSize)->take($pageSize)->get()->toArray();
+
+        return ['code'=>0,'data'=>$list,'message'=>"success"];
     }
 
     public function getPoetryDetail()

@@ -21,6 +21,7 @@ Route::group(['prefix' => 'poetry','namespace' => 'Api'], function () {
 
     Route::get("/recommend",'PoetryController@recommend');
     Route::get("/getPoetryDetail",'PoetryController@getPoetryDetail');
+    Route::get("/getPoetryList",'PoetryController@getPoetryList');
     Route::get("/getAuthorList",'PoetryController@getAuthorList');
     Route::get("/getTypeList",'PoetryController@getTypeList');
 
