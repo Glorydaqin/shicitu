@@ -58,7 +58,10 @@ class PoetryController extends Controller
         if($typeId)
             $handle->where("type",$typeId);
         $list = $handle->skip(($pageNo-1)*$pageSize)->take($pageSize)->get()->toArray();
-
+        foreach ($list as &$value){
+            $value['paragraphs'] = json_decode($value['paragraphs'],true);
+            $value['strains'] = json_decode($value['strains'],true);
+        }
         return ['code'=>0,'data'=>$list,'message'=>"success"];
     }
 
@@ -68,6 +71,9 @@ class PoetryController extends Controller
         $detail = Poetry::where("id",$id)->first();
         if(!$detail)
             return ['code'=>1,'data'=>[],'message'=>'cannot find data with id:'.$id];
+
+        $detail['paragraphs'] = json_decode($detail['paragraphs'],true);
+        $detail['strains'] = json_decode($detail['strains'],true);
 
         return ['code'=>0,'data'=>$detail,'message'=>'success'];
     }
