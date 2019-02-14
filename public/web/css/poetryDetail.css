@@ -6,7 +6,7 @@ html, body {
 }
 
 @media screen and (min-width: 1201px) {
-  .detail {
+  /* .detail {
     min-height: 100%;
     width: 100%;
     padding-bottom: 20px;
@@ -52,6 +52,58 @@ html, body {
   
   
   .detail .main-content .content {
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+  } */
+
+  .detail {
+    min-height: 100%;
+    width: 100%;
+    padding-bottom: 20px;
+    background-color: #E1E0C7;
+  }
+  
+  .main-content {
+    padding-top: 20px;
+    text-align: center;
+    height: 80%;
+  }
+  
+  .main-content .title-box {
+    display: block;
+    margin: 0 auto;
+    padding-left: 10px;
+    width: 40%;
+    height: 52px;
+    background-color: #F0EFE2;
+    text-align: left;
+    line-height: 52px;
+  }
+  
+  .main-content .title-box .title{
+    display: inline-block;
+    padding-left: 10px;
+    font-size: 20px;
+    height: 30px;
+    line-height: 30px;
+  }
+  
+  .main-content .title-box .title-line {
+    border-left: 2px solid #A2C241;
+  }
+  
+  
+  .main-content .poetry-item {
+    margin: 20px auto 0;
+    padding: 10px;
+    width: 40%;
+    background-color: #F0EFE2;
+  }
+  
+  
+  .main-content .content {
     font-size: 14px;
     height: 30px;
     line-height: 30px;
@@ -67,7 +119,7 @@ html, body {
     background-color: #E1E0C7;
   }
   
-  .detail .main-content {
+  /* .detail .main-content {
     padding-top: 20px;
     text-align: center;
     height: 80%;
@@ -107,8 +159,50 @@ html, body {
   
   .detail .main-content .content {
     font-size: 14px;
-    /* height: 30px;
-    line-height: 30px; */
+    padding: 5px;
+    text-align: left;
+  } */
+
+  .main-content {
+    padding-top: 20px;
+    text-align: center;
+    height: 80%;
+  }
+  
+  .main-content .title-box {
+    display: block;
+    margin: 0 auto;
+    padding-left: 10px;
+    width: 100%;
+    height: 52px;
+    background-color: #F0EFE2;
+    text-align: left;
+    line-height: 52px;
+  }
+  
+  .main-content .title-box .title{
+    display: inline-block;
+    padding-left: 10px;
+    font-size: 20px;
+    height: 30px;
+    line-height: 30px;
+  }
+  
+  .main-content .title-box .title-line {
+    border-left: 2px solid #A2C241;
+  }
+  
+  
+  .main-content .poetry-item {
+    margin: 20px auto 0;
+    padding: 10px;
+    width: 100%;
+    background-color: #F0EFE2;
+  }
+  
+  
+  .main-content .content {
+    font-size: 14px;
     padding: 5px;
     text-align: left;
   }
