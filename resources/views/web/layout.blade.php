@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="/web/css/head.css">
     <link rel="stylesheet" href="/web/css/index.css">
     <link rel="stylesheet" href="/web/css/poetryList.css">
-    <link rel="stylesheet" href="/web/css/poetryDetail.css">
     <link rel="stylesheet" href="/web/css/paramBox.css">
     <link rel="stylesheet" href="/web/css/page.css">
     <link rel="shortcut icon" href="/web/img/favicon.ico">
+    @section("css")
+    @show
 </head>
 <body>
 <div class="index">

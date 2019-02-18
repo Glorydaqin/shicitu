@@ -1,4 +1,7 @@
 @extends("web.layout")
+@section("css")
+<link rel="stylesheet" href="/web/css/poetryDetail.css">
+@endsection
 
 @section("container")
     <div class="title-box">

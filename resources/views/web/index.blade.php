@@ -23,6 +23,6 @@
         </div>
     </div>
     <div class="right-box">
-
+    @include("web.paramBox")
     </div>
 @endsection
